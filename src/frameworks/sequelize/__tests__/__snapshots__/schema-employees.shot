@@ -1043,15 +1043,15 @@ export function initModels(sequelize: Sequelize) {
   Department.belongsToMany(Employee, {
     as: 'employees',
     through: DeptEmp,
-    foreignKey: 'emp_no',
-    otherKey: 'dept_no',
+    foreignKey: 'dept_no',
+    otherKey: 'emp_no',
     onDelete: 'CASCADE'
   })
   Department.belongsToMany(Employee, {
     as: 'managers',
     through: DeptManager,
-    foreignKey: 'emp_no',
-    otherKey: 'dept_no',
+    foreignKey: 'dept_no',
+    otherKey: 'emp_no',
     onDelete: 'CASCADE'
   })
   Department.hasMany(DeptEmp, {

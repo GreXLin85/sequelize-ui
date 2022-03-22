@@ -163,18 +163,18 @@ const department: Model = {
     {
       id: uniqueId(),
       alias: 'employee',
-      foreignKey: 'emp_no',
+      foreignKey: 'dept_no',
       sourceModelId: Id.Departments,
       targetModelId: Id.Employees,
-      type: manyToManyModelType(Id.DepartmentEmployees, 'dept_no'),
+      type: manyToManyModelType(Id.DepartmentEmployees, 'emp_no'),
     },
     {
       id: uniqueId(),
       alias: 'manager',
-      foreignKey: 'emp_no',
+      foreignKey: 'dept_no',
       sourceModelId: Id.Departments,
       targetModelId: Id.Employees,
-      type: manyToManyModelType(Id.DepartmentManagers, 'dept_no'),
+      type: manyToManyModelType(Id.DepartmentManagers, 'emp_no'),
     },
     {
       id: uniqueId(),
