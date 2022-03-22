@@ -802,7 +802,24 @@ const film_actor: Model = {
   name: 'film_actor',
   createdAt: time,
   updatedAt: time,
-  fields: [],
+  fields: [
+    {
+      id: uniqueId(),
+      name: 'film_id',
+      type: integerDataType({ unsigned: true }),
+      primaryKey: false,
+      required: true,
+      unique: false,
+    },
+    {
+      id: uniqueId(),
+      name: 'actor_id',
+      type: integerDataType({ unsigned: true }),
+      primaryKey: false,
+      required: true,
+      unique: false,
+    },
+  ],
   associations: [
     {
       id: uniqueId(),
@@ -828,7 +845,24 @@ const film_category: Model = {
   name: 'film_category',
   createdAt: time,
   updatedAt: time,
-  fields: [],
+  fields: [
+    {
+      id: uniqueId(),
+      name: 'film_id',
+      type: integerDataType({ unsigned: true }),
+      primaryKey: false,
+      required: true,
+      unique: false,
+    },
+    {
+      id: uniqueId(),
+      name: 'category_id',
+      type: integerDataType({ unsigned: true }),
+      primaryKey: false,
+      required: true,
+      unique: false,
+    },
+  ],
   associations: [
     {
       id: uniqueId(),

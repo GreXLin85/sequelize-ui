@@ -9,7 +9,6 @@
 
 - [ ] **Documentation**: Document functions and modules
 
-- [ ] **Tests**: Add Sequelize framework tests
 - [ ] **Tests**: Add E2E browser tests
 - [ ] **Tests**: Increase unit test coverage
 
@@ -24,10 +23,13 @@
 
 ### In Progress
 
-- [ ] **CI**: Run E2E SQL tests for all dialects before prod deploy
+- [ ] **Tests**: Add E2E framework tests
+  - [ ] Fix foreign key not null
+  - [ ] Verify through tables (as opposed to through models)
 
 ### Done ✓
 
 - [x] **API**: Persist db options for user
 - [x] **Tests**: Run E2E SQL tests against all example schemas
 - [x] **UI**: Allow highlighting of code
+- [x] **CI**: Run E2E SQL tests for all dialects before prod deploy

@@ -826,6 +826,16 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
+      filmId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        field: 'film_id',
+        allowNull: false
+      },
+      actorId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        field: 'actor_id',
+        allowNull: false
+      },
       createdAt: {
         type: DataTypes.DATE,
         field: 'created_at'
@@ -833,14 +843,6 @@ module.exports = {
       updatedAt: {
         type: DataTypes.DATE,
         field: 'updated_at'
-      },
-      filmId: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        field: 'film_id'
-      },
-      actorId: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        field: 'actor_id'
       }
     })
   },
@@ -865,6 +867,16 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
+      filmId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        field: 'film_id',
+        allowNull: false
+      },
+      categoryId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        field: 'category_id',
+        allowNull: false
+      },
       createdAt: {
         type: DataTypes.DATE,
         field: 'created_at'
@@ -872,14 +884,6 @@ module.exports = {
       updatedAt: {
         type: DataTypes.DATE,
         field: 'updated_at'
-      },
-      filmId: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        field: 'film_id'
-      },
-      categoryId: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        field: 'category_id'
       }
     })
   },
@@ -1926,6 +1930,8 @@ export class FilmActor extends Model<
   InferCreationAttributes<FilmActor, {omit: FilmActorAssociations}>
 > {
   declare id: CreationOptional<number>
+  declare filmId: number
+  declare actorId: number
   declare createdAt: CreationOptional<Date>
   declare updatedAt: CreationOptional<Date>
 
@@ -1952,6 +1958,14 @@ export class FilmActor extends Model<
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false
+      },
+      filmId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+      },
+      actorId: {
+        type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false
       },
       createdAt: {
@@ -1996,6 +2010,8 @@ export class FilmCategory extends Model<
   InferCreationAttributes<FilmCategory, {omit: FilmCategoryAssociations}>
 > {
   declare id: CreationOptional<number>
+  declare filmId: number
+  declare categoryId: number
   declare createdAt: CreationOptional<Date>
   declare updatedAt: CreationOptional<Date>
 
@@ -2022,6 +2038,14 @@ export class FilmCategory extends Model<
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false
+      },
+      filmId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+      },
+      categoryId: {
+        type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false
       },
       createdAt: {
